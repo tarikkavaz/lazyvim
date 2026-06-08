@@ -9,9 +9,21 @@ return {
           endpoint = "https://api.openai.com/v1",
           model = "gpt-5.5",
           timeout = 60000,
-          disable_tools = true,
         },
       },
+      system_prompt = function()
+        local ok, hub = pcall(require, "mcphub")
+        if not ok then
+          return ""
+        end
+        local instance = hub.get_hub_instance()
+        return instance and instance:get_active_servers_prompt() or ""
+      end,
+      custom_tools = function()
+        return {
+          require("mcphub.extensions.avante").mcp_tool(),
+        }
+      end,
     },
   },
 }
