@@ -12,6 +12,9 @@ return {
     },
     opts = {
       config = vim.fn.stdpath("config") .. "/mcphub/servers.json",
+      auto_approve = function(params)
+        return params.server_name == "context7"
+      end,
       global_env = {
         "CONTEXT7_API_KEY",
       },

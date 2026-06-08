@@ -9,6 +9,9 @@ return {
           endpoint = "https://api.openai.com/v1",
           model = "gpt-5.5",
           timeout = 60000,
+          -- gpt-5.x + MCP tools requires /v1/responses, not /v1/chat/completions
+          use_response_api = true,
+          support_previous_response_id = true,
         },
       },
       system_prompt = function()
