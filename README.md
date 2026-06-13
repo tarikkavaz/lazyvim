@@ -3,7 +3,9 @@
 A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
-
+This setup includes an optional, reversible
+[GUI-friendly keybinding profile](docs/GUI_KEYBINDINGS.md) for developers
+coming from VS Code, Cursor, or other desktop editors.
 
 - Make a backup of your current Neovim files:
   ```sh
@@ -27,4 +29,3 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
   ```sh
   nvim
   ```
-

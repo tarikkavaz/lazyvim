@@ -24,3 +24,5 @@ vim.opt.signcolumn = "yes"
 -- other settings
 vim.opt.backspace = "indent,eol,start"
 vim.opt.clipboard = "unnamedplus"
+
+require("config.gui_keybindings").setup_options()
